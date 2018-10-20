@@ -1,5 +1,6 @@
 package com.example.jasonthomas.localsound;
 
+import android.content.pm.ActivityInfo;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +30,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -70,7 +72,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private void connected() {
         // Then we will write some more code here.
         // Play a playlist
-        mSpotifyAppRemote.getPlayerApi().play("spotify:user:spotify:playlist:37i9dQZF1DX2sUQwD7tbmL");
+        mSpotifyAppRemote.getPlayerApi().play("spotify:user:spotify:playlist:68tfQvGY8tnJ05optRvGBP");
 
     }
 
